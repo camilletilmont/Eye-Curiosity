@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="93T-Wn-Iaq">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Bold</string>
+            <string>Optima-BoldItalic</string>
+            <string>Optima-Italic</string>
+            <string>Optima-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller Date-->
+        <scene sceneID="Te4-ho-NA0">
+            <objects>
+                <viewController id="93T-Wn-Iaq" customClass="CEViewControllerDate" customModule="CuriosityEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KyM-1V-p4X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aJI-yw-5W9">
+                                <rect key="frame" x="0.0" y="221.5" width="320" height="163"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aJI-yw-5W9" secondAttribute="height" multiplier="375:191" id="y29-3K-v8g"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="530876754.04363602">
+                                    <!--2017-10-28 09:45:54 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="366026400">
+                                    <!--2012-08-07 10:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="512647200">
+                                    <!--2017-03-31 10:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHl-ZZ-DIz">
+                                <rect key="frame" x="0.0" y="44" width="320" height="160.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oHl-ZZ-DIz" secondAttribute="height" multiplier="375:188" id="NgE-yk-cJQ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="93T-Wn-Iaq" id="cUZ-ir-QlX"/>
+                                    <outlet property="delegate" destination="93T-Wn-Iaq" id="ufV-8u-Hqf"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYh-Z4-qPn">
+                                <rect key="frame" x="81.5" y="445.5" width="157" height="45"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="157" id="lp7-Ew-oW5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="27"/>
+                                <state key="normal" title="GO To Mars">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionGoToMars:" destination="93T-Wn-Iaq" eventType="touchUpInside" id="itJ-d3-s5t"/>
+                                    <segue destination="MpD-7J-jFe" kind="show" identifier="goToMars" id="wRc-gx-i0k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoS-jS-PbE">
+                                <rect key="frame" x="140" y="511" width="37" height="37"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="SM9-bf-e7h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="21"/>
+                                <state key="normal" title="i">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cDJ-HG-8Nj" kind="show" id="fgv-iM-1Qt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.73667603729999998" green="0.60171324010000005" blue="0.44494417310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BYh-Z4-qPn" firstAttribute="top" secondItem="aJI-yw-5W9" secondAttribute="bottom" constant="61" id="01c-ye-c5b"/>
+                            <constraint firstItem="aJI-yw-5W9" firstAttribute="top" secondItem="oHl-ZZ-DIz" secondAttribute="bottom" constant="17" id="40J-yv-pJx"/>
+                            <constraint firstItem="eoS-jS-PbE" firstAttribute="centerX" secondItem="aS7-SE-l74" secondAttribute="centerX" constant="-1.3333333333333428" id="4OR-0I-a9A"/>
+                            <constraint firstItem="aS7-SE-l74" firstAttribute="trailing" secondItem="aJI-yw-5W9" secondAttribute="trailing" id="KWe-6b-dDc"/>
+                            <constraint firstItem="BYh-Z4-qPn" firstAttribute="centerX" secondItem="aS7-SE-l74" secondAttribute="centerX" id="LnY-Ed-E82"/>
+                            <constraint firstItem="oHl-ZZ-DIz" firstAttribute="leading" secondItem="aS7-SE-l74" secondAttribute="leading" id="eJZ-it-32M"/>
+                            <constraint firstItem="aS7-SE-l74" firstAttribute="trailing" secondItem="oHl-ZZ-DIz" secondAttribute="trailing" id="lpw-gQ-a4e"/>
+                            <constraint firstItem="aS7-SE-l74" firstAttribute="bottom" secondItem="eoS-jS-PbE" secondAttribute="bottom" constant="20" id="nwg-Jc-bGt"/>
+                            <constraint firstItem="oHl-ZZ-DIz" firstAttribute="top" secondItem="aS7-SE-l74" secondAttribute="top" constant="24" id="tVn-Ke-kMZ"/>
+                            <constraint firstItem="aJI-yw-5W9" firstAttribute="leading" secondItem="aS7-SE-l74" secondAttribute="leading" id="w47-28-gLo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aS7-SE-l74"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonGoToMars" destination="BYh-Z4-qPn" id="QAr-vX-glS"/>
+                        <outlet property="buttonInfos" destination="eoS-jS-PbE" id="yip-US-8pw"/>
+                        <outlet property="datePicker" destination="aJI-yw-5W9" id="ZqW-Bx-fGb"/>
+                        <outlet property="pickerViewCamera" destination="oHl-ZZ-DIz" id="h0e-Vk-JZS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFO-7v-fr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1320" y="141.5492957746479"/>
+        </scene>
+        <!--View Controller Informations-->
+        <scene sceneID="pgc-7s-FMR">
+            <objects>
+                <viewController id="cDJ-HG-8Nj" customClass="CEViewControllerInformations" customModule="CuriosityEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="coL-tz-0wz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ere-il-kw5">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.75101126269999996" green="0.61223602460000004" blue="0.45677327870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0A-2G-bvT">
+                                <rect key="frame" x="0.0" y="20" width="320" height="36"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                <state key="normal" title="Retour">
+                                    <color key="titleColor" red="0.72910057110000004" green="0.5943740891" blue="0.44344695589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eEB-f4-Uza" kind="unwind" unwindAction="unwindToThisViewControllerWithSegue:" id="Eep-ib-75T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ere-il-kw5" firstAttribute="leading" secondItem="iXN-AE-2Oa" secondAttribute="leading" id="ETI-qW-13u"/>
+                            <constraint firstItem="ere-il-kw5" firstAttribute="top" secondItem="z0A-2G-bvT" secondAttribute="bottom" constant="8" id="QBb-hL-aat"/>
+                            <constraint firstItem="z0A-2G-bvT" firstAttribute="top" secondItem="iXN-AE-2Oa" secondAttribute="top" id="Tcv-5a-Ki8"/>
+                            <constraint firstItem="iXN-AE-2Oa" firstAttribute="bottom" secondItem="ere-il-kw5" secondAttribute="bottom" id="f03-6j-rBT"/>
+                            <constraint firstItem="iXN-AE-2Oa" firstAttribute="trailing" secondItem="ere-il-kw5" secondAttribute="trailing" id="h4o-6f-bUV"/>
+                            <constraint firstItem="iXN-AE-2Oa" firstAttribute="trailing" secondItem="z0A-2G-bvT" secondAttribute="trailing" id="k3x-xZ-J33"/>
+                            <constraint firstItem="z0A-2G-bvT" firstAttribute="leading" secondItem="iXN-AE-2Oa" secondAttribute="leading" id="yIz-Yv-oIu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iXN-AE-2Oa"/>
+                    </view>
+                    <connections>
+                        <outlet property="spaceTextInfo" destination="ere-il-kw5" id="WhM-Xj-CEV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWp-v7-3Cw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eEB-f4-Uza" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1321" y="899"/>
+        </scene>
+        <!--View Controller Collection View-->
+        <scene sceneID="lgE-YN-tsk">
+            <objects>
+                <viewController id="MpD-7J-jFe" customClass="CEViewControllerCollectionView" customModule="CuriosityEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mD7-bU-ke0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qTi-Wk-NRf">
+                                <rect key="frame" x="0.0" y="56" width="320" height="512"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VTX-T3-r6E">
+                                    <size key="itemSize" width="85" height="82"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" id="eNS-2P-2id">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="IHF-5K-otm" customClass="CECollectionViewCellPhoto" customModule="CuriosityEye" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4QH-QL-gck">
+                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="82"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="4QH-QL-gck" secondAttribute="trailing" id="Bcc-Yw-yoR"/>
+                                            <constraint firstItem="4QH-QL-gck" firstAttribute="leading" secondItem="IHF-5K-otm" secondAttribute="leading" id="GRM-LQ-qyT"/>
+                                            <constraint firstItem="4QH-QL-gck" firstAttribute="top" secondItem="IHF-5K-otm" secondAttribute="top" id="OoV-IG-P7J"/>
+                                            <constraint firstAttribute="bottom" secondItem="4QH-QL-gck" secondAttribute="bottom" id="qdq-fP-0sk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imagePhotoCuriosity" destination="4QH-QL-gck" id="CZb-Hl-o42"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="mD7-bU-ke0" id="cxj-Yt-alc"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgL-SR-JG5">
+                                <rect key="frame" x="0.0" y="20" width="274" height="36"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                <state key="normal" title="Retour">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kVE-CF-m1S" kind="unwind" unwindAction="unwindToThisViewControllerWithSegue:" id="sW2-dY-O9x"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Pas de photo ce jour là" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkz-Rp-gUj">
+                                <rect key="frame" x="7" y="279" width="306" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7ub-wk-YOZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.81521550344286309" blue="0.60821095681003756" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaD-Fh-K1P">
+                                <rect key="frame" x="267" y="20" width="53" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XaD-Fh-K1P" secondAttribute="height" multiplier="19:12" constant="-4" id="C8u-dR-dHY"/>
+                                    <constraint firstAttribute="height" constant="36" id="Lue-py-77w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75101126269999996" green="0.61223602460000004" blue="0.45677327870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qTi-Wk-NRf" firstAttribute="leading" secondItem="f1b-Js-IXg" secondAttribute="leading" id="5Ai-Du-GtU"/>
+                            <constraint firstItem="cgL-SR-JG5" firstAttribute="top" secondItem="f1b-Js-IXg" secondAttribute="top" id="7lL-yP-Jec"/>
+                            <constraint firstItem="hkz-Rp-gUj" firstAttribute="centerX" secondItem="f1b-Js-IXg" secondAttribute="centerX" id="Bps-5O-fMD"/>
+                            <constraint firstItem="f1b-Js-IXg" firstAttribute="trailing" secondItem="XaD-Fh-K1P" secondAttribute="trailing" id="Mmo-4j-fsM"/>
+                            <constraint firstItem="f1b-Js-IXg" firstAttribute="bottom" secondItem="qTi-Wk-NRf" secondAttribute="bottom" id="aVu-Ll-DEP"/>
+                            <constraint firstItem="hkz-Rp-gUj" firstAttribute="centerY" secondItem="f1b-Js-IXg" secondAttribute="centerY" id="eej-lK-je0"/>
+                            <constraint firstItem="qTi-Wk-NRf" firstAttribute="top" secondItem="cgL-SR-JG5" secondAttribute="bottom" id="fN5-Rm-MyY"/>
+                            <constraint firstItem="XaD-Fh-K1P" firstAttribute="top" secondItem="f1b-Js-IXg" secondAttribute="top" id="j16-Lk-d3g"/>
+                            <constraint firstItem="XaD-Fh-K1P" firstAttribute="leading" secondItem="cgL-SR-JG5" secondAttribute="trailing" constant="-7" id="pvx-W5-FDN"/>
+                            <constraint firstItem="cgL-SR-JG5" firstAttribute="leading" secondItem="f1b-Js-IXg" secondAttribute="leading" id="rn8-U7-HdR"/>
+                            <constraint firstItem="f1b-Js-IXg" firstAttribute="trailing" secondItem="qTi-Wk-NRf" secondAttribute="trailing" id="xl7-pV-ugx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f1b-Js-IXg"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionViewPhoto" destination="qTi-Wk-NRf" id="SrB-hg-COh"/>
+                        <outlet property="labelCountPhotos" destination="XaD-Fh-K1P" id="CFq-JJ-zpO"/>
+                        <outlet property="loadingIndicator" destination="eNS-2P-2id" id="SuT-rw-Sop"/>
+                        <outlet property="messageNoPhoto" destination="hkz-Rp-gUj" id="VDk-5y-Vlb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyG-yH-4ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kVE-CF-m1S" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-607.20000000000005" y="141.87192118226602"/>
+        </scene>
+    </scenes>
+</document>
